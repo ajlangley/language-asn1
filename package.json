@@ -1,0 +1,13 @@
+{
+  "name": "language-asn1",
+  "version": "0.0.0",
+  "description": "ASN.1 support in atom",
+  "engines": {
+    "atom": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajLangley12/language-asn1"
+  },
+  "license": ""
+}
