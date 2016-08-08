@@ -1,53 +1,57 @@
-name: 'ASN.1'
 fileTypes: [
   "asn",
   "asn1"
 ]
-scopeName: 'source.asn'
-
-repository:
-
-  main:
-    patterns: [
-      {include: 'comments'}
-      {include: 'operators'}
-      {include: 'keyWords'}
-      {include: 'types'}
-      {include: 'numbers'}
-      {include: 'strings'}
-    ]
-
-  comments:
-    patterns: [
-        {name:'comment.line.asn', match:'--.*$'}
-      ]
-
-  operators:
-    patterns: [
-        {name:'keyword.operator.assignment.asn', match:'::='}
-        {name:'keyword.operator.logical.asn', match:'\|'}
-        {name:'keyword.operator.arithmetic.asn', match:'\.\.'}
-      ]
-
-  keyWords:
-    patterns: [
-        {name:'keyword.control', match:'DEFINITIONS|AUTOMATIC TAGS|BEGIN|END'}
-        {name:'keyword.control.import', match:'IMPORTS|FROM'}
-      ]
-
-  types:
-    patterns: [
-        {name:'storage.type.asn', match:'( |\t)(BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Graphic|General|)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)'}
-      ]
-
-  numbers:
-    patterns: [
-        {name:'constant.numeric.asn', match:'[-+]?([0-9]*[^.]\.[0-9]+|[0-9]+)'}
-      ]
-
-  strings:
-    patterns: [
-        {name:'string.quoted.double.turing'
-        begin: '"'
-        end: '"'
-      ]
+name: "Abstract Syntax Notation"
+patterns: [
+  {
+    match: "--.*$",
+    name: "comment.line.asn"
+  },
+  {
+    match: "::=",
+    name: "keyword.operator.assignment.asn"
+  },
+  {
+    match: "\\|",
+    name: "keyword.operator.logical.asn"
+  },
+  {
+    match: "\\.\\.",
+    name: "keyword.operator.arithmetic.asn"
+  },
+  {
+    match: "(SEQUENCE|SET|CLASS|CHOICE|OF|BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Visible|Graphic|General)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)",
+    name: "storage.type.asn"
+  },
+  {
+    match: "[-+]?([0-9]*(|.)[0-9]+)",
+    name: "constant.numeric.integer.asn"
+  },
+  {
+    begin: '"',
+    end: '"',
+    name:'string.quoted.double.turing'
+  },
+  {
+    match: "OPTIONAL|SIZE|\\^ FROM",
+    name: "storage.modifier.asn"
+  },
+  {
+    match: "DEFINITIONS|AUTOMATIC TAGS|BEGIN|END",
+    name: "keyword.control.asn"
+  },
+  {
+    match: "IMPORTS|FROM",
+    name: "keyword.control.import.asn"
+  },
+  {
+    match: "(IM|EX)PLICIT",
+    name: "constant.language.asn"
+  },
+  #{
+  #  match: "SIZE|^ FROM",
+  #  name:
+  #}
+]
+scopeName: "source.asn"
