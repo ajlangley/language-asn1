@@ -10,23 +10,27 @@ patterns: [
   },
   {
     match: "::=",
-    name: "keyword.operator.assignment.asn"
+    name: "keyword.operator.asn"
   },
   {
     match: "\\|",
-    name: "keyword.operator.logical.asn"
+    name: "keyword.operator.asn"
   },
   {
     match: "\\.\\.",
-    name: "keyword.operator.arithmetic.asn"
+    name: "keyword.operator.asn"
   },
   {
-    match: "(SEQUENCE|SET|CLASS|CHOICE|OF|BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Visible|Graphic|General)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)",
+    match: "(SEQUENCE|SET|CLASS|CHOICE|OF)",
     name: "storage.type.asn"
   },
   {
-    match: "[-+]?([0-9]*(|.)[0-9]+)",
-    name: "constant.numeric.integer.asn"
+    match: "(BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Visible|Graphic|General)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)",
+    name: "variable.other.asn"
+  },
+  {
+    match: "[-+]?[0-9]+|[-+]?\\.[0-9]+",
+    name: "constant.numeric.float.asn"
   },
   {
     begin: '"',
@@ -43,15 +47,11 @@ patterns: [
   },
   {
     match: "IMPORTS|FROM",
-    name: "keyword.control.import.asn"
+    name: "support.constant.asn"
   },
   {
     match: "(IM|EX)PLICIT",
     name: "constant.language.asn"
-  },
-  #{
-  #  match: "SIZE|^ FROM",
-  #  name:
-  #}
+  }
 ]
 scopeName: "source.asn"
