@@ -11,7 +11,6 @@ repository:
     patterns: [
       {include: 'comments'}
       {include: 'operators'}
-      {include: 'moduleActions'}
       {include: 'keyWords'}
       {include: 'types'}
       {include: 'numbers'}
@@ -30,14 +29,10 @@ repository:
         {name:'keyword.operator.arithmetic.asn', match:'\.\.'}
       ]
 
-  moduleActions:
-    patterns: [
-        {name:'keyword.control.import', match:'IMPORTS|FROM'}
-      ]
-
   keyWords:
     patterns: [
-        {name:'keyword.', match:''}
+        {name:'keyword.control', match:'DEFINITIONS|AUTOMATIC TAGS|BEGIN|END'}
+        {name:'keyword.control.import', match:'IMPORTS|FROM'}
       ]
 
   types:
@@ -47,10 +42,12 @@ repository:
 
   numbers:
     patterns: [
-        {name:'', match:''}
+        {name:'constant.numeric.asn', match:'[-+]?([0-9]*[^.]\.[0-9]+|[0-9]+)'}
       ]
 
   strings:
     patterns: [
-        {name:'', match:''}
+        {name:'string.quoted.double.turing'
+        begin: '"'
+        end: '"'
       ]
