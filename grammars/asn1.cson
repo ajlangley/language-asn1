@@ -27,22 +27,22 @@ repository:
     patterns: [
         {name:'keyword.operator.assignment.asn', match:'::='}
         {name:'keyword.operator.logical.asn', match:'\|'}
-        {name:'', match:''}
+        {name:'keyword.operator.arithmetic.asn', match:'\.\.'}
       ]
 
   moduleActions:
     patterns: [
-        {name:'', match:''}
+        {name:'keyword.control.import', match:'IMPORTS|FROM'}
       ]
 
   keyWords:
     patterns: [
-        {name:'', match:''}
+        {name:'keyword.', match:''}
       ]
 
   types:
     patterns: [
-        {name:'', match:''}
+        {name:'storage.type.asn', match:'( |\t)(BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Graphic|General|)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)'}
       ]
 
   numbers:
