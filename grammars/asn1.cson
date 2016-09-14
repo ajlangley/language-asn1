@@ -10,11 +10,11 @@ patterns: [
   },
   {
     match: "::=",
-    name: "keyword.operator.asn"
+    name: "storage.type.asn"
   },
   {
     match: "\\|",
-    name: "keyword.operator.asn"
+    name: "storage.type.asn"
   },
   {
     match: "\\.\\.",
@@ -22,11 +22,11 @@ patterns: [
   },
   {
     match: "(SEQUENCE|SET|CLASS|CHOICE|OF)",
-    name: "storage.type.function.asn"
+    name: "storage.type.asn"
   },
   {
     match: "(BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Visible|Graphic|General)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)",
-    name: "variable.other.asn"
+    name: "storage.type.function.asn"
   },
   {
     match: "[-+]?[0-9]+|[-+]?\\.[0-9]+",
@@ -43,7 +43,7 @@ patterns: [
   },
   {
     match: "DEFINITIONS|AUTOMATIC TAGS|BEGIN|END",
-    name: "keyword.control.asn"
+    name: "storage.type.function.asn"
   },
   {
     match: "IMPORTS|FROM",
