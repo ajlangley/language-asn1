@@ -43,7 +43,7 @@ patterns: [
   },
   {
     match: "DEFINITIONS|AUTOMATIC TAGS|BEGIN|END",
-    name: "storage.type.function.asn"
+    name: "meta.function.asn"
   },
   {
     match: "IMPORTS|FROM",
