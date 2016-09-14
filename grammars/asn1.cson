@@ -35,7 +35,7 @@ patterns: [
   {
     begin: '"',
     end: '"',
-    name:'string.quoted.double.asn'
+    name: 'string.quoted.double.asn'
   },
   {
     match: "OPTIONAL|SIZE|\\^ FROM",
