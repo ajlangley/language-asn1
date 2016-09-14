@@ -22,7 +22,7 @@ patterns: [
   },
   {
     match: "(SEQUENCE|SET|CLASS|CHOICE|OF)",
-    name: "storage.type.asn"
+    name: "storage.type.function.asn"
   },
   {
     match: "(BOOLEAN|INTEGER|ENUMERATED|REAL|(BIT|OCTET) STRING|NULL|OBJECT IDENTIFIER|ANY|DATE|DATE-TIME|(Numeric|Printable|Teletex|IA5|Visible|Graphic|General)String|(Generalized|UTC)Time|EXTERNAL|Object Descriptor)",
@@ -35,7 +35,7 @@ patterns: [
   {
     begin: '"',
     end: '"',
-    name:'string.quoted.double.turing'
+    name:'string.quoted.double.asn'
   },
   {
     match: "OPTIONAL|SIZE|\\^ FROM",
