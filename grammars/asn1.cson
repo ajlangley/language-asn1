@@ -43,7 +43,7 @@ patterns: [
   },
   {
     match: "DEFINITIONS|AUTOMATIC TAGS|BEGIN|END",
-    name: "punctuation.definition.parameters.end.asn"
+    name: "entity.name.type.class.asn"
   },
   {
     match: "IMPORTS|FROM",
