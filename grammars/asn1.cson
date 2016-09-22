@@ -29,7 +29,7 @@ patterns: [
     name: "variable.language.asn"
   },
   {
-    match: "[-+]?[0-9]+|[-+]?\\.[0-9]+",
+    match: "(?:\(|\.\.)([-+]?[0-9]+|[-+]?\\.[0-9]+)(?:\)|\.\.)",
     name: "constant.numeric.float.asn"
   },
   {
